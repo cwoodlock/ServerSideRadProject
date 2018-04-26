@@ -31,7 +31,7 @@ public class ShipController {
 	//This will display all the ships in the table
 	@RequestMapping(value = "/showShips", method=RequestMethod.GET)
 	public String showShips(Model model) {
-		List<Ship> ships = shipService.findAll();
+		List<Ship> ships = (List<Ship>) shipService.findAll();
 		model.addAttribute("ships", ships);
 		
 		

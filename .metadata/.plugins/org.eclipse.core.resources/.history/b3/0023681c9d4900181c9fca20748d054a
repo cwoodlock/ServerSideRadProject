@@ -15,7 +15,7 @@ public class ShipService {
 	ShipRepository shipRepository;
 	
 	public List<Ship> findAll() {
-		return (List<Ship>) shipRepository.findAll();
+		return shipRepository.findAll();
 	}
 
 	public Ship saveShip(Ship ship) {
