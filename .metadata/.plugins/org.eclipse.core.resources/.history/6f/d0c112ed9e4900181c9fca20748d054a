@@ -1,0 +1,12 @@
+package com.ships.services;
+
+import com.ships.model.ShippingCompany;
+
+public class ShippingCompanyService {
+
+	public void saveShip(ShippingCompany shippingCompany) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

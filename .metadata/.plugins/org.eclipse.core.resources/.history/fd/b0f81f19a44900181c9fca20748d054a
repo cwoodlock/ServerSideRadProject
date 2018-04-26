@@ -1,0 +1,19 @@
+package com.ships.services;
+
+import java.util.List;
+
+import com.ships.model.ShippingCompany;
+
+public class ShippingCompanyService {
+
+	public void saveShip(ShippingCompany shippingCompany) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public List<ShippingCompany> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
