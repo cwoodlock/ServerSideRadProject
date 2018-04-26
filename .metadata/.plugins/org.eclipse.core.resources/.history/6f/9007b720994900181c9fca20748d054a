@@ -1,0 +1,18 @@
+package com.ships.services;
+
+import com.ships.model.Ship;
+
+public class ShipService {
+
+	public Iterable<Ship> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void saveShip(Ship ship) {
+		// TODO Auto-generated method stub
+		
+	}
+
+		
+}
