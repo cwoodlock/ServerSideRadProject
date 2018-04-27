@@ -1,0 +1,19 @@
+package com.ships.services;
+
+import java.util.List;
+
+import com.ships.model.OrderInfo;
+
+public class OrderInfoService {
+
+	public List<OrderInfo> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void save(OrderInfo orderInfo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

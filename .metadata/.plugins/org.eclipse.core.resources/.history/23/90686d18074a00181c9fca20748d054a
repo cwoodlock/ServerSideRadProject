@@ -1,0 +1,14 @@
+package com.ships.services;
+
+import java.util.ArrayList;
+
+import com.ships.model.OrderInfo;
+
+public class OrderService {
+
+	public ArrayList<OrderInfo> listAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

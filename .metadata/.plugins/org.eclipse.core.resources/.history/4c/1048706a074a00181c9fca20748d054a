@@ -1,0 +1,50 @@
+package com.ships.controllers;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.ships.model.OrderInfo;
+import com.ships.model.Ship;
+import com.ships.model.ShippingCompany;
+import com.ships.services.OrderService;
+import com.ships.services.ShipService;
+import com.ships.services.ShippingCompanyService;
+
+public class OrderController {
+	
+	//These are beans that will be used to handle data
+	@Autowired 
+	private OrderService orderService;
+	
+	@Autowired 
+	private ShipService shipService;
+	
+	@Autowired 
+	private ShippingCompanyService shippingCompanyService;
+	
+	//Method to display table
+	@RequestMapping(value = "/showOrders", method=RequestMethod.GET)
+	public String listOrders(Model model) {
+		
+		List<OrderInfo> orderInfos = orderService.findAll();						// gets all the values in the order info table
+		model.addAttribute("orderService", orderService);									// it links the data to the returned page containing "orderInfos" attribute
+
+		return "showOrderInfo";
+	}
+	
+	
+
+}
