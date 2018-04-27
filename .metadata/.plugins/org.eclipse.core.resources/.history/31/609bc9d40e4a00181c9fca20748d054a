@@ -1,7 +1,3 @@
-/*
- Colm Woodlock
- G00341460
- */
 package com.ships.services;
 
 import java.time.LocalDate;
