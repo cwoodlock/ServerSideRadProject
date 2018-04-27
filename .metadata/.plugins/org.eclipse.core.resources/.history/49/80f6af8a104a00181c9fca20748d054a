@@ -41,7 +41,7 @@ public class OrderController {
 	private ShippingCompanyService shippingCompanyService;
 	
 	//Method to display table
-	@RequestMapping(value = "/showOrderInfo", method=RequestMethod.GET)
+	@RequestMapping(value = "/showOrders", method=RequestMethod.GET)
 	public String listOrders(Model model) {
 		
 		List<OrderInfo> orderInfos = orderInfoService.findAll();	
@@ -50,7 +50,7 @@ public class OrderController {
 		return "showOrderInfo"; //jsp page
 	}
 	
-	@RequestMapping(value = "/addOrderInfo", method=RequestMethod.GET)
+	@RequestMapping(value = "/createOrder", method=RequestMethod.GET)
 	public String createOrderGET(Model model) {
 
 		//Map id to the balance and the name
@@ -98,7 +98,7 @@ public class OrderController {
 		return shippingCompanyList;
 	}
 	
-	@RequestMapping(value = "/showOrderInfo", method=RequestMethod.POST)
+	@RequestMapping(value = "/createOrder", method=RequestMethod.POST)
 	public String addOrderPOST(@Valid @ModelAttribute("orderInfo") OrderInfo orderInfo, BindingResult result, Model model) {
 		
 		boolean isBalanceSmaller;
